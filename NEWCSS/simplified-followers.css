@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Kameron', serif;
+}
+
+html {
+    cursor: url('Cursor/cursor.png'), auto;
+}
+
+body {
+    font-family: 'Kameron', serif;
+    color: #00025F;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #9500ac, #0063a5);
+    padding: 20px;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0 20px;
+    font-family: "Inconsolata", monospace;
+    color: #dd00ff;
+    cursor: text;
+    padding: 15px;
+    border-bottom: 3px solid #dd00ff;
+}
+
+.title::selection {
+    background-color: #D6E6FF;
+}
+
+.back-button {
+    align-self: flex-start;
+    margin: 0 0 20px 0;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #F08FFF, #71C6FF);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    cursor: url('Cursor/cursor_pointer.png'), auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(240, 143, 255, 0.3);
+}
+
+.back-button:focus {
+    outline: 1px solid #a632ff;
+}
+
+.followers-container {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.follower-item {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.follower-item:hover {
+    border-color: #BE6AFF;
+    box-shadow: 0 4px 16px rgba(190, 106, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.follower-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #BE6AFF;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(190, 106, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.follower-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0; /* Allows text truncation */
+}
+
+.follower-name-link {
+    text-decoration: none;
+    cursor: url('Cursor/cursor_pointer.png'), auto;
+}
+
+.follower-name-link:hover .follower-name {
+    color: #BE6AFF;
+    transition: color 0.3s ease;
+}
+
+.follower-name-link:focus {
+    outline: 2px solid #a632ff;
+    border-radius: 4px;
+}
+
+.follower-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #00025F;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.follower-bio {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+    cursor: text;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.follower-email {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.empty-message {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    padding: 40px 20px;
+    font-style: italic;
+    cursor: text;
+}
+
+/* Enhanced Mobile responsive */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 36px;
+        margin: 15px 0 20px;
+        padding: 12px;
+    }
+    
+    .back-button {
+        padding: 10px 16px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .followers-container {
+        padding: 18px;
+        max-height: 70vh;
+        max-width: 95%;
+    }
+    
+    .follower-item {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .follower-pic {
+        margin-right: 0;
+        width: 65px;
+        height: 65px;
+    }
+    
+    .follower-info {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .follower-name {
+        font-size: 17px;
+    }
+    
+    .follower-bio {
+        font-size: 14px;
+        text-align: center;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+    }
+    
+    .follower-email {
+        font-size: 12px;
+    }
+    
+    .empty-message {
+        font-size: 16px;
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .title {
+        font-size: 30px;
+        margin: 10px 0 15px;
+        padding: 10px;
+    }
+    
+    .back-button {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+    
+    .followers-container {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .follower-item {
+        padding: 12px;
+    }
+    
+    .follower-pic {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .follower-name {
+        font-size: 15px;
+    }
+    
+    .follower-bio {
+        font-size: 13px;
+    }
+    
+    .follower-email {
+        font-size: 11px;
+    }
+    
+    .empty-message {
+        font-size: 14px;
+        padding: 25px 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 26px;
+    }
+    
+    .followers-container {
+        padding: 12px;
+    }
+    
+    .follower-item {
+        padding: 10px;
+    }
+    
+    .follower-pic {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #BE6AFF;
+    }
+    
+    .follower-name {
+        font-size: 14px;
+    }
+    
+    .follower-bio {
+        font-size: 12px;
+    }
+    
+    .follower-email {
+        font-size: 10px;
+    }
+    
+    .empty-message {
+        font-size: 13px;
+        padding: 20px 8px;
+    }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    background: linear-gradient(0deg, #dd00ff 0%, #0099ff 100%);
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00025F;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* Text selection styling */
+.title::selection, 
+.follower-name::selection, 
+.follower-bio::selection, 
+.follower-email::selection,
+.empty-message::selection {
+    background-color: #D6E6FF;
+}
+
+/* Loading animation for smooth interactions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.follower-item {
+    animation: fadeIn 0.3s ease-out;
+}
