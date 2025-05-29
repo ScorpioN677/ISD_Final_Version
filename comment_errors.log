@@ -1,0 +1,19 @@
+[2025-05-17 23:07:06] Received comment data | Data: {"user_id":20,"poll_id":19,"text":"hello","parent_comment_id":null}
+[2025-05-17 23:07:06] Transaction failed | Data: "Unknown column 'created_at' in 'field list'"
+[2025-05-17 23:08:32] Received comment data | Data: {"user_id":20,"poll_id":19,"text":"hi","parent_comment_id":null}
+[2025-05-17 23:08:36] Received comment data | Data: {"user_id":20,"poll_id":19,"text":"ho","parent_comment_id":5}
+[2025-05-17 23:25:22] Received comment data | Data: {"user_id":26,"poll_id":14,"text":"hh","parent_comment_id":null}
+[2025-05-17 23:25:25] Received comment data | Data: {"user_id":26,"poll_id":14,"text":"what","parent_comment_id":7}
+[2025-05-17 23:25:28] Received comment data | Data: {"user_id":26,"poll_id":14,"text":"meow","parent_comment_id":null}
+[2025-05-27 10:37:48] Received comment data | Data: {"user_id":24,"poll_id":25,"text":"hello","parent_comment_id":null}
+[2025-05-27 10:37:51] Received comment data | Data: {"user_id":24,"poll_id":25,"text":"hi","parent_comment_id":5}
+[2025-05-27 10:38:36] Received comment data | Data: {"user_id":19,"poll_id":25,"text":"hello","parent_comment_id":5}
+[2025-05-27 10:38:47] Received comment data | Data: {"user_id":19,"poll_id":25,"text":"hi","parent_comment_id":null}
+[2025-05-27 23:24:44] Received comment data | Data: {"user_id":24,"poll_id":27,"text":"hello","parent_comment_id":null}
+[2025-05-27 23:31:24] Received comment data | Data: {"user_id":24,"poll_id":27,"text":"hello","parent_comment_id":9}
+[2025-05-28 16:44:54] Received comment data | Data: {"user_id":27,"poll_id":25,"text":"wa 3alaykom l hello wa ra7matollah","parent_comment_id":5}
+[2025-05-28 18:58:49] Received comment data | Data: {"user_id":28,"poll_id":25,"text":"Hello","parent_comment_id":null}
+[2025-05-28 19:00:42] Received comment data | Data: {"user_id":29,"poll_id":25,"text":"Hello","parent_comment_id":null}
+[2025-05-28 19:08:08] Received comment data | Data: {"user_id":30,"poll_id":25,"text":"hello","parent_comment_id":null}
+[2025-05-28 20:49:04] Received comment data | Data: {"user_id":30,"poll_id":25,"text":"hello","parent_comment_id":6}
+[2025-05-28 20:50:49] Received comment data | Data: {"user_id":30,"poll_id":25,"text":"hello","parent_comment_id":6}
