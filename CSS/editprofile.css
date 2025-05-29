@@ -1,0 +1,198 @@
+        * {
+            scroll-behavior: smooth;
+            font-family: 'Kameron', serif;
+            font-size: 32px;
+        }
+
+        html {
+            cursor: url('Cursor/cursor.png'), auto;
+
+        }
+
+        body {
+            color: #00025F;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            margin-bottom: 30px;
+            padding: 0;
+            background: linear-gradient(180deg, #F08FFF, #0099ff);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bolder;
+            border-bottom: 3px solid #dd00ff;
+            margin: 20px 0px;
+            padding: 15px;
+            font-family: "Inconsolata", monospace;
+            cursor: text;
+        }
+
+        #edit_pic {
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            gap: 15px;
+        }
+
+        form div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            width: 300px;
+        }
+
+        .profile_pic,
+        .bio {
+            align-self: center;
+        }
+
+        .profile_pic > label {
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+        }
+
+        .profile_pic > label img {
+            width: 150px;
+            height: 150px;
+        }
+
+        label {
+            cursor: text;
+        }
+
+        .save {
+            width: 150px;
+        }
+
+        input,
+        button,
+        select {
+            background-color: #D6E6FF;
+            border: 3px solid #BE6AFF;
+            border-radius: 30px;
+            width: 300px;
+            height: 35px;
+            font-size: 17px;
+        }
+
+        input,
+        select {
+            padding-left: 15px;
+            font-size: 20px;
+        }
+
+        select {
+            width: 320px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .buttons a {
+            background-color: #D6E6FF;
+            border: 3px solid #BE6AFF;
+            border-radius: 30px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        select,
+        a {
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+        }
+
+        .buttons button {
+            height: 50px;
+            font-size: 30px;
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+        }
+
+        input:hover,
+        input:focus {
+            background-color: #ECECEC;
+            border: 3px solid #a632ff;
+            transition: 0.2s ease-in-out;
+        }
+
+        label::selection,
+        .title::selection {
+            background-color: #D6E6FF;
+        }
+
+        input::selection,
+        select::selection {
+            background-color: #ECECEC;
+        }
+
+        input:focus,
+        button:focus,
+        a:focus,
+        select:focus {
+            outline: 1px solid #a632ff;
+        }
+
+        input:focus::selection,
+        button::selection,
+        .buttons a::selection {
+            background-color: #bdd6ff;
+        }
+
+        button:hover,
+        select:hover,
+        .buttons a:hover {
+            background-color: #afceff;
+            border: 3px solid #a632ff;
+            transition: 0.2s ease-in-out;
+            color: rgb(32, 32, 32);
+        }
+
+        .logo::selection {
+            background-color: rgb(214, 230, 255, 0.6);
+        }
+
+        ::placeholder {
+            color: #888888;
+            font-size: 17px;
+        }
+
+
+        ::-webkit-scrollbar {
+            background: linear-gradient(0deg, #dd00ff 0%, #0099ff 100%);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #00025F;
+            border-radius: 15px;
+        }
+
+        .message {
+            background-color: #D6E6FF;
+            border: 3px solid #BE6AFF;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .error {
+            background-color: #ffebee;
+            border: 3px solid #ff5252;
+        }

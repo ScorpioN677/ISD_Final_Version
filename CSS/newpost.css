@@ -1,0 +1,261 @@
+* {
+    scroll-behavior: smooth;
+    font-family: 'Kameron', serif;
+}
+
+body {
+    color: #00025F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #9500ac, #0063a5);
+    background-size: 400% 400%;
+    animation: bgCircular 5s ease infinite;
+    font-size: 24px;
+}
+
+.boxes {
+    width: 93%;
+    padding: 10px;
+    padding-right: unset;
+    border: 3px solid #BE6AFF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.boxes div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.boxes div label {
+    flex-grow: 1;
+    text-align: left;
+    cursor: text;
+}
+
+.logo {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+form {
+    width: 35%;
+    max-width: 600px;
+    min-height: 500px;
+    margin-top: 30px;
+    background: linear-gradient(0deg, #71C6FF 0%, #F08FFF 100%);
+    box-shadow: -4px -4px 6px 5px rgba(0, 153, 255, 0.5), 4px 4px 6px 5px #F08FFF;
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 20px 0px;
+    font-family: "Inconsolata", monospace;
+}
+
+.message {
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #D6E6FF;
+    border: 3px solid #BE6AFF;
+    color: #00025F;
+}
+
+input,
+select,
+.buttons button,
+.delete {
+    border: 3px solid #BE6AFF;
+    border-radius: 30px;
+    height: 35px;
+    font-size: 17px;
+    background-color: #D6E6FF;
+    padding: 0px 15px;
+}
+
+.buttons button {
+    cursor: pointer;
+    width: 120px;
+    height: 45px;
+    font-size: 24px;
+}
+
+.add {
+    width: 100px !important;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+select {
+    width: 220px;
+    padding-right: 0px;
+}
+
+div img {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: help;
+}
+
+input[type = 'checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
+#poll-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.question-answers {
+    border: 3px solid #BE6AFF;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.question {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #BE6AFF;
+    border-radius: unset;
+}
+
+.addAnswer {
+    align-self: flex-end;
+    width: 45px;
+    height: 45px;
+    font-size: 35px;
+    border: 3px solid #BE6AFF;
+    border-radius: 100%;
+    cursor: pointer !important;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.logo::selection {
+    background-color: rgb(214, 230, 255, 0.6);
+}
+
+.title::selection,
+label::selection,
+legend::selection {
+    background-color: #D6E6FF;
+}
+
+.question::selection,
+.question:hover,
+.question:focus {
+    background-color: unset;
+    outline: unset;
+    border: none;
+    border-bottom: 3px solid #BE6AFF;
+    border-radius: unset;
+}
+
+.question::selection,
+button::selection,
+select::selection,
+input:focus::selection {
+    background-color: #bdd6ff;
+}
+
+a:focus {
+    outline: none;
+}
+
+.addAnswer::selection {
+    background-color: rgb(190, 190, 190);
+}
+
+input::selection {
+    background-color: #ECECEC;
+}
+
+input:hover,
+input:focus {
+    background-color: #ECECEC;
+    border: 3px solid #a632ff;
+    transition: 0.2s ease-in-out;
+}
+
+input:focus,
+button:focus,
+select:focus {
+    outline: 1px solid #a632ff;
+}
+
+button:hover {
+    background-color: #afceff;
+    border: 3px solid #a632ff;
+    transition: 0.2s ease-in-out;
+    color: rgb(32, 32, 32);
+}
+
+@keyframes bgCircular {
+    0% {
+        background: #9500ac;
+    }
+
+    50% {
+        background: #0063a5;
+    }
+
+    100% {
+        background: #9500ac;
+    }
+}
+
+::placeholder {
+    color: #888888;
+    font-size: 17px;
+}
+
+::-webkit-scrollbar {
+    background: linear-gradient(0deg, #dd00ff 0%, #0099ff 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00025F;
+    border-radius: 15px;
+}

@@ -1,0 +1,235 @@
+* {
+            scroll-behavior: smooth;
+        }
+
+        html {
+            cursor: url('Cursor/cursor.png'), auto;
+        }
+
+        body {
+            font-family: 'Kameron', serif;
+            color: #00025F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #9500ac, #0063a5);
+            background-size: 400% 400%;
+            animation: bgCircular 5s ease infinite;
+        }
+
+        .logo {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+        }
+
+        .logo::selection {
+            background-color: rgb(214, 230, 255, 0.6);
+        }
+
+        form {
+            min-width: 60px;
+            min-height: 50px;
+            margin: 30px 0;
+            background: linear-gradient(0deg, #71C6FF 0%, #F08FFF 100%);
+            box-shadow: -4px -4px 6px 5px rgba(0, 153, 255, 0.5), 4px 4px 6px 5px #F08FFF;
+            border-radius: 75px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            z-index: 99;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bolder;
+            margin: 20px 0px;
+            font-family: "Inconsolata", monospace;
+        }
+
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            margin: 0px 15px;
+        }
+
+        .row > div {
+            position: relative;
+        }
+
+        .title {
+            cursor: text;
+        }
+
+        label {
+            cursor: text;
+            font-size: 28px;
+            padding: 20px 0px;
+        }
+
+        .title::selection,
+        label::selection,
+        .signup::selection,
+        .forget::selection,
+        .message::selection {
+            background-color: #D6E6FF;
+        }
+
+        input,
+        button {
+            border: 3px solid #BE6AFF;
+            border-radius: 30px;
+            width: 600px;
+            height: 40px;
+            font-size: 17px;
+            background-color: #D6E6FF;
+        }
+
+        input {
+            padding-left: 15px;
+        }
+
+        input:hover,
+        input:focus {
+            background-color: #ECECEC;
+            border: 3px solid #a632ff;
+            transition: 0.2s ease-in-out;
+        }
+
+        input:focus,
+        button:focus,
+        a:focus {
+            outline: 1px solid #a632ff;
+        }
+
+        input::selection {
+            background-color: #ECECEC;
+        }
+
+        .eye::selection {
+            background-color: rgb(190, 190, 190);
+        }
+
+        input:focus::selection,
+        button::selection {
+            background-color: #bdd6ff;
+        }
+
+        .eye {
+            position: absolute;
+            top: 51.5%;
+            right: 2px;
+            translate: -50% -50%;
+            width: 25px;
+            height: 25px;
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+        }
+
+        .remember {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .remember input {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            cursor: url('Cursor/cursor.png'), auto;
+        }
+
+        .remember label {
+            cursor: url('Cursor/cursor.png'), auto;
+        }
+
+        button {
+            font-family: 'Kameron', serif;
+            font-size: 25px;
+            margin-top: 5px;
+            width: 150px;
+            height: 45px;
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+            align-self: center;
+            line-height: 1;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #afceff;
+            border: 3px solid #a632ff;
+            transition: 0.2s ease-in-out;
+            color: rgb(32, 32, 32);
+        }
+
+        .forget {
+            text-decoration: none;
+            color: #dd00ff;
+            border-radius: 30px;
+            align-self: center;
+            font-size: 30px;
+            margin: 10px 0px;
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+        }
+
+        .forget:hover {
+            color: #eb65ff;
+            transition: 0.2s ease-in-out;
+        }
+
+        .signup {
+            align-self: center;
+            font-size: 30px;
+            margin: 10px 0px;
+            cursor: text;
+        }
+
+        .signup a {
+            text-decoration: none;
+            color: #dd00ff;
+            border-radius: 30px;
+            cursor: url('Cursor/cursor_pointer.png'), auto;
+        }
+
+        .signup a:hover {
+            color: #eb65ff;
+            transition: 0.2s ease-in-out;
+        }
+
+        @keyframes bgCircular {
+            0% {
+                background: #9500ac;
+            }
+
+            50% {
+                background: #0063a5;
+            }
+
+            100% {
+                background: #9500ac;
+            }
+        }
+
+        ::placeholder {
+            color: #888888;
+            font-size: 17px;
+        }
+
+
+        ::-webkit-scrollbar {
+            background: linear-gradient(0deg, #dd00ff 0%, #0099ff 100%);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #00025F;
+            border-radius: 15px;
+        }

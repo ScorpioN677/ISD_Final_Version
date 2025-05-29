@@ -1,0 +1,249 @@
+        * {
+            scroll-behavior: smooth;
+            font-family: 'Kameron', serif;
+            font-size: 32px;
+        }
+
+        html {
+            cursor: url('../../Cursor/cursor.png'), auto;
+        }
+
+        body {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            min-height: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            padding: 0;
+            background: linear-gradient(180deg, #F08FFF, #0099ff);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .title,
+        .name_age,
+        .bio {
+            cursor: text;
+        }
+
+        .title {
+            text-align: center;
+            align-self: center;
+            font-size: 50px;
+            font-weight: bolder;
+            border-bottom: 3px solid #dd00ff;
+            margin: 20px 0px;
+            padding: 15px;
+            font-family: "Inconsolata", monospace;
+            color: #00025F;
+        }
+
+        .info {
+            margin: 15px 0px;
+        }
+
+        .personal_info {
+            display: flex;
+            gap: 20px;
+            align-items: start;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #dd00ff;
+        }
+
+        .name_age {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name_age p {
+            font-size: 25px;
+            margin: 5px 0px;
+        }
+
+        .bio {
+            margin: 15px 0px;
+        }
+
+        #profile_pic {
+            width: 75px;
+            height: 75px;
+            align-self: center;
+        }
+
+        .follows,
+        .edit {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0px;
+            justify-content: flex-start;
+        }
+
+        button {
+            border: 3px solid #BE6AFF;
+            border-radius: 30px;
+            font-size: 17px;
+            background-color: #D6E6FF;
+            font-size: 25px;
+            margin-top: 5px;
+            padding: 2px 10px;
+            height: 45px;
+            cursor: url('../../Cursor/cursor_pointer.png'), auto;
+            text-align: center;
+        }
+
+        a {
+            cursor: url('../../Cursor/cursor_pointer.png'), auto;
+        }
+
+        a > button:hover {
+            background-color: #afceff;
+            border: 3px solid #a632ff;
+            transition: 0.2s ease-in-out;
+            color: rgb(32, 32, 32);
+        }
+
+        .posts {
+            background-color: #D6E6FF;
+            width: 95%;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            border: 4px solid #BE6AFF;
+            border-radius: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 0px;
+            border-bottom: 3px solid #dd00ff;
+        }
+
+        .buttons button {
+            border: none;
+            font-size: 10px;
+            width: 50%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        .buttons .firstButton {
+            border-right: 3px solid #dd00ff;
+            border-radius: 0px;
+            border-start-start-radius: 30px;
+        }
+
+        .buttons button img {
+            width: 50px;
+            height: 50px;
+            padding: 10px 0px;
+        }
+
+        .img:hover {
+            caret-color: #00025F;
+        }
+
+        a:focus {
+            outline: 1px solid #a632ff;
+        }
+
+        a button::selection {
+            background-color: #bdd6ff;
+        }
+
+        .name_age p::selection,
+        .bio::selection,
+        .title::selection,
+        img::selection {
+            background-color: #D6E6FF;
+        }
+
+        ::placeholder {
+            color: #888888;
+            font-size: 17px;
+        }
+
+        ::-webkit-scrollbar {
+            background: linear-gradient(0deg, #dd00ff 0%, #0099ff 100%);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #00025F;
+            border-radius: 15px;
+        }
+
+        .message {
+            background-color: #D6E6FF;
+            border: 3px solid #BE6AFF;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            align-self: center;
+        }
+
+        .error {
+            background-color: #ffebee;
+            border: 3px solid #ff5252;
+        }
+
+        .post-container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .post {
+            background-color: white;
+            border: 2px solid #BE6AFF;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #BE6AFF;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .post-question {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .post-answers {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .favorites-container {
+            display: none;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+        }
+
+        .active {
+            background-color: #f0f8ff;
+        }

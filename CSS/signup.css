@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Kameron', serif;
+}
+
+html {
+    cursor: url('Cursor/cursor.png'), auto;
+}
+
+body {
+    font-family: 'Kameron', serif;
+    color: #00025F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #9500ac, #0063a5);
+    padding: 20px;
+}
+
+.logo {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.logo::selection {
+    background-color: rgb(214, 230, 255, 0.6);
+}
+
+form {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: "Inconsolata", monospace;
+    color: #dd00ff;
+    cursor: text;
+}
+
+.title::selection,
+label::selection,
+.login::selection,
+.message::selection {
+    background-color: #D6E6FF;
+}
+
+.message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #00025F;
+    cursor: text;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    font-family: 'Kameron', serif;
+    background-color: #ffffff;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+    border-color: #BE6AFF;
+}
+
+input:focus {
+    outline: 1px solid #a632ff;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+input::selection {
+    background-color: #ECECEC;
+}
+
+input:focus::selection {
+    background-color: #bdd6ff;
+}
+
+.row > div {
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    cursor: url('Cursor/cursor_pointer.png'), auto;
+}
+
+.eye:hover {
+    opacity: 1;
+}
+
+.eye::selection {
+    background-color: rgb(190, 190, 190);
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember input {
+    width: auto;
+    margin: 0;
+}
+
+.remember label {
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #F08FFF, #71C6FF);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px 0 10px;
+    transition: all 0.3s ease;
+    font-family: 'Kameron', serif;
+    cursor: url('Cursor/cursor_pointer.png'), auto;
+    line-height: 1;
+    text-align: center;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(240, 143, 255, 0.3);
+}
+
+button:focus {
+    outline: 1px solid #a632ff;
+}
+
+button::selection {
+    background-color: #bdd6ff;
+}
+
+.forget {
+    display: block;
+    text-align: center;
+    color: #dd00ff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: url('Cursor/cursor_pointer.png'), auto;
+}
+
+.forget:hover {
+    text-decoration: underline;
+    color: #eb65ff;
+    transition: 0.2s ease-in-out;
+}
+
+.forget:focus {
+    outline: 1px solid #a632ff;
+}
+
+.login {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 16px;
+    cursor: text;
+}
+
+.login a {
+    color: #dd00ff;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: url('Cursor/cursor_pointer.png'), auto;
+}
+
+.login a:hover {
+    text-decoration: underline;
+    color: #eb65ff;
+    transition: 0.2s ease-in-out;
+}
+
+.login a:focus {
+    outline: 1px solid #a632ff;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.signup a {
+    color: #dd00ff;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 30px 20px;
+    }
+    
+    .logo {
+        left: 10px;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+}
+
+/* Preserve original animations and scrollbar styling */
+@keyframes bgCircular {
+    0% {
+        background: #9500ac;
+    }
+
+    50% {
+        background: #0063a5;
+    }
+
+    100% {
+        background: #9500ac;
+    }
+}
+
+::-webkit-scrollbar {
+    background: linear-gradient(0deg, #dd00ff 0%, #0099ff 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00025F;
+    border-radius: 15px;
+}
